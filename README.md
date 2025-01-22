@@ -1,19 +1,15 @@
-Schemes
-=======
-
-[![NPM version](https://badge.fury.io/js/schemes.svg)](http://badge.fury.io/js/schemes)
-[![Build Status](https://travis-ci.org/Munter/schemes.svg?branch=master)](https://travis-ci.org/Munter/schemes)
-[![Coverage Status](https://img.shields.io/coveralls/Munter/schemes.svg)](https://coveralls.io/r/Munter/schemes?branch=master)
-[![Dependency Status](https://david-dm.org/Munter/schemes.svg)](https://david-dm.org/Munter/schemes)
+# Schemes
 
 A javascript object map of official [iana.org Uniform Resource Identifier (URI) Schemes](http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) and crowd sourced unofficial schemes.
 
 This can be used to look up the rfc's for the corresponding schemes or check a schemes validity based on of it exists in the list of not.
 
-Usage
------
+:warning: **This repo was forked and modified for publishing via. JSR for Deno. Not all documentation here has been updated for TypeScript/Deno. The original repository appears inactive https://github.com/Munter/schemes**
+
+## Usage
+
 ```javascript
-var schemes = require('schemes');
+import schemas from 'jsr:@silverbucket/iana-schemas';
 
 schemes.permanent[0]; // {
                       //   "scheme": "aaa",
@@ -67,17 +63,16 @@ schemes.allByName; // {
                    // }
 ```
 
-Contributing
-------------
+## Contributing
 
-Part of this module is auto generated from iana official lists, but the unofficial ones are not. If you find that a specific scheme is missing from these lists, please submit a pull request that adds it to the [unofficial schemes list](https://github.com/Munter/schemes/blob/master/lib/unofficial.json).
+Part of this module is auto generated from iana official lists, but the unofficial ones are not. If you find that a specific scheme is missing from these lists, please submit a pull request that adds it to the [unofficial schemes list](https://github.com/silverbucket/iana-schemes/blob/master/lib/unofficial.json).
 
 
-License
--------
+## License
 (The MIT License)
 
 Copyright (c) 2015 Peter Müller <munter@fumle.dk>
+Copyright (c) 2025 Nick Jennings <nick@silverbucket.net>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
