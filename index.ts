@@ -29,7 +29,7 @@ Object.keys(data).forEach(function (type) {
   });
 });
 
-data.unofficial = unofficial.filter(
+data.unofficial = unofficial.default.filter(
   function (item: { scheme: string | number }) {
     return !allByName[item.scheme];
   },
