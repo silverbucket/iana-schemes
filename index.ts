@@ -1,5 +1,3 @@
-import extend from "extend";
-
 type DataSchemas = {
   [key: string]: any;
 };
@@ -39,4 +37,5 @@ data.unofficial.forEach(function (schemeObj: { scheme: string | number }) {
   allByName[schemeObj.scheme] = extend(schemeObj, { type: "unofficial" });
 });
 
-export default extend(data, { allByName: allByName });
+data.allByName = allByName;
+export default data;

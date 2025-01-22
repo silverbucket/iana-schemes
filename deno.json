@@ -17,7 +17,6 @@
     "deep-equal": "npm:deep-equal@^1.0.1",
     "lodash.keyby": "npm:lodash.keyby@^4.4.0",
     "simple-array-diff": "npm:simple-array-diff@^1.1.0",
-    "simple-get": "npm:simple-get@^2.2.0",
-    "extend": "npm:extend@^3.0.0"
+    "simple-get": "npm:simple-get@^2.2.0"
   }
 }
