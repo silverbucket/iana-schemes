@@ -22,8 +22,9 @@ const unofficial = await import("./lib/unofficial.json", {
 const allByName: DataSchemas = {};
 
 Object.keys(data).forEach(function (type) {
-  data[type].forEach(function (schemeObj: { scheme: string | number }) {
-    allByName[schemeObj.scheme] = extend(schemeObj, { type: type });
+  data[type].forEach(function (schemeObj: { scheme: string | number, type: string }) {
+    schemeObj.type = type;
+    allByName[schemeObj.scheme] = schemeObj;
   });
 });
 
@@ -33,8 +34,9 @@ data.unofficial = unofficial.default.filter(
   },
 );
 
-data.unofficial.forEach(function (schemeObj: { scheme: string | number }) {
-  allByName[schemeObj.scheme] = extend(schemeObj, { type: "unofficial" });
+data.unofficial.forEach(function (schemeObj: { scheme: string | number, type: string }) {
+  schemeObj.type = "unofficial";
+  allByName[schemeObj.scheme] = schemeObj;
 });
 
 data.allByName = allByName;
