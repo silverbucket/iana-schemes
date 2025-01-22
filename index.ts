@@ -1,6 +1,10 @@
 import extend from "extend";
 
-const data = {
+type DataSchemas = {
+  [key: string]: any;
+};
+
+const data: DataSchemas = {
   permanent: await import("./lib/iana-permanent.json", {
     with: { type: "json" },
   }),
@@ -17,7 +21,7 @@ const unofficial = await import("./lib/unofficial.json", {
   with: { type: "json" },
 });
 
-const allByName = {};
+const allByName: DataSchemas = {};
 
 Object.keys(data).forEach(function (type) {
   data[type].forEach(function (schemeObj: { scheme: string | number }) {
