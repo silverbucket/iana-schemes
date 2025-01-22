@@ -2,16 +2,21 @@ type DataSchemas = {
   [key: string]: any;
 };
 
+const permanentData = await import("./lib/iana-permanent.json", {
+  with: { type: "json" },
+});
+const provisionalData = await import("./lib/iana-provisional.json", {
+    with: { type: "json" },
+});
+
+const historicalData = await import("./lib/iana-historical.json", {
+    with: { type: "json" },
+});
+
 const data: DataSchemas = {
-  permanent: await import("./lib/iana-permanent.json", {
-    with: { type: "json" },
-  }),
-  provisional: await import("./lib/iana-provisional.json", {
-    with: { type: "json" },
-  }),
-  historical: await import("./lib/iana-historical.json", {
-    with: { type: "json" },
-  }),
+  permanent: permanentData.default,
+  provisional: provisionalData.default,
+  historical: historicalData.default,
   unofficial: [],
 };
 
