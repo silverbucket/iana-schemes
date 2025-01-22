@@ -1,0 +1,26 @@
+{
+  "name": "iana-schemes",
+  "version": "1.4.0",
+  "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
+  "exports": "./index.ts",
+  "tasks": {
+    "test": "jshint . --exclude-path .gitignore",
+    "build": "deno --allow-env --allow-net tools/update-schemes.ts",
+    "travis": "npm run test && npm run build"
+  },
+  "files": [
+    "index.ts",
+    "lib"
+  ],
+  "license": "MIT",
+  "imports": {
+    "chalk": "npm:chalk@^1.1.3",
+    "cheerio": "npm:cheerio@^0.22.0",
+    "deep-equal": "npm:deep-equal@^1.0.1",
+    "jshint": "npm:jshint@^2.9.2",
+    "lodash.keyby": "npm:lodash.keyby@^4.4.0",
+    "simple-array-diff": "npm:simple-array-diff@^1.1.0",
+    "simple-get": "npm:simple-get@^2.2.0"
+    "extend": "npm:extend@^3.0.0"
+  }
+}
