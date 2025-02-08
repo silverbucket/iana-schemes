@@ -7,7 +7,7 @@ import arrayDiff from "simple-array-diff";
 import deepEqual from "deep-equal";
 import keyBy from "lodash.keyby";
 
-const unofficial = await import("./../lib/unofficial.json", {
+const unofficial = await import("../lib/unofficial.json", {
   with: { type: "json" },
 });
 
