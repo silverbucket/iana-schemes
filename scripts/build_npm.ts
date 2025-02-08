@@ -10,7 +10,7 @@ await build({
     deno: true,
   },
   package: {
-    name: 'iana-schemes',
+    name: deno.name,
     version: deno.version,
     description: deno.description,
     license: deno.license,
