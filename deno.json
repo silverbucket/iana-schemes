@@ -1,6 +1,6 @@
 {
   "name": "@silverbucket/iana-schemes",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
   "exports": "./index.ts",
   "tasks": {
